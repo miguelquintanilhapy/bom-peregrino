@@ -590,9 +590,9 @@ a { text-decoration: none; color: inherit; }
   grid-row: span 2;
 }
 
-/* Nosso Espaço — three equal-size photos */
-.gallery-grid-3 {
-  grid-template-columns: repeat(3, 1fr);
+/* Nosso Espaço — four equal-size photos */
+.gallery-grid-4 {
+  grid-template-columns: repeat(4, 1fr);
   grid-auto-rows: 280px;
 }
 
@@ -602,7 +602,7 @@ a { text-decoration: none; color: inherit; }
     grid-auto-rows: 130px;
   }
   .gallery-item.large { grid-column: span 2; grid-row: span 2; }
-  .gallery-grid-3 {
+  .gallery-grid-4 {
     grid-template-columns: repeat(2, 1fr);
     grid-auto-rows: 160px;
   }
