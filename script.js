@@ -12,7 +12,7 @@ nav.querySelectorAll('a').forEach(link => {
 });
 
 // Lightbox gallery
-const galleryItems = Array.from(document.querySelectorAll('#gallery-grid .gallery-item img'));
+const galleryItems = Array.from(document.querySelectorAll('#gallery-grid-espaco .gallery-item img, #gallery-grid-cardapio .gallery-item img'));
 const lightbox = document.getElementById('lightbox');
 const lightboxImg = document.getElementById('lightbox-img');
 const lightboxCounter = document.getElementById('lightbox-counter');
