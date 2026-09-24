@@ -372,6 +372,44 @@ a { text-decoration: none; color: inherit; }
 }
 .section-subtitle .icon { margin-right: 4px; color: var(--brand-red); }
 
+/* Award / press mention */
+.award-inner {
+  display: grid;
+  grid-template-columns: 0.9fr 1.1fr;
+  gap: 56px;
+  align-items: center;
+}
+.award-photo {
+  border-radius: var(--radius);
+  border: 1px solid var(--line);
+  box-shadow: 0 8px 24px rgba(36,23,18,0.12);
+}
+.award-text p { color: var(--text-muted); margin: 0 0 24px; }
+.award-text strong { color: var(--brand-red); }
+.award-badges {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+.award-badge {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  background: var(--paper-alt);
+  border: 1px solid var(--line);
+  border-radius: 12px;
+  padding: 14px 18px;
+  color: var(--ink);
+  font-weight: 700;
+  font-size: 0.85rem;
+  line-height: 1.3;
+}
+.award-badge .icon { width: 28px; height: 28px; color: var(--brand-red); flex-shrink: 0; }
+
+@media (max-width: 800px) {
+  .award-inner { grid-template-columns: 1fr; }
+}
+
 /* Rodizio grid */
 .rodizio-grid {
   display: grid;
