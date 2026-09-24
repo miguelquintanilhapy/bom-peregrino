@@ -52,7 +52,8 @@ a { text-decoration: none; color: inherit; }
   padding: 12px 24px;
 }
 
-.logo { display: flex; align-items: center; }
+.logo { display: flex; align-items: center; transition: opacity 0.2s; }
+.logo:hover { opacity: 0.85; }
 
 .logo-img {
   height: 56px;
@@ -75,6 +76,7 @@ a { text-decoration: none; color: inherit; }
 
 .nav-cta {
   background: var(--ink);
+  margin-left: 24px;
   padding: 10px 22px;
   border-radius: 999px;
   color: #fff !important;
@@ -515,22 +517,28 @@ a { text-decoration: none; color: inherit; }
 .feature-card h4 { margin: 0 0 6px; color: var(--brand-red); font-size: 1rem; }
 .feature-card p { margin: 0; color: var(--text-muted); font-size: 0.88rem; }
 
-/* VIP */
-.vip-inner {
-  display: grid;
-  grid-template-columns: 1fr 1fr;
-  gap: 48px;
-  align-items: center;
+/* VIP + Gift Card, merged into one centered block */
+.vip-giftcard-inner {
+  display: flex;
+  align-items: flex-start;
+  justify-content: center;
+  gap: 56px;
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
 }
-.vip-text p { color: var(--text-muted); margin-bottom: 28px; }
-.vip-image {
-  border-radius: var(--radius);
-  border: 1px solid var(--line);
+.vip-text, .giftcard-text { flex: 1; }
+.vip-text p, .giftcard-text p { color: var(--text-muted); margin-bottom: 28px; }
+.vip-giftcard-divider {
+  width: 1px;
+  align-self: stretch;
+  background: var(--line);
 }
 
-/* Gift card */
-.giftcard-inner { text-align: center; max-width: 640px; margin: 0 auto; }
-.giftcard-text p { color: var(--text-muted); margin-bottom: 28px; }
+@media (max-width: 800px) {
+  .vip-giftcard-inner { flex-direction: column; }
+  .vip-giftcard-divider { display: none; }
+}
 
 /* Gallery */
 .gallery-grid {
@@ -935,7 +943,7 @@ a { text-decoration: none; color: inherit; }
 
 /* Responsive */
 @media (max-width: 800px) {
-  .chefinho-inner, .vip-inner, .historia-inner, .localizacao-inner, .footer-grid {
+  .chefinho-inner, .localizacao-inner, .footer-grid {
     grid-template-columns: 1fr;
   }
   .nav {
