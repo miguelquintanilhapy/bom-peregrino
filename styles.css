@@ -10,9 +10,8 @@
   --cream: #f4f3f0;          /* logo highlight white */
   --text-muted: #d9b79a;
   --radius: 14px;
-  --font-script: 'Cinzel', serif;
-  --font-display: 'Playfair Display', serif;
-  --font-body: 'Poppins', sans-serif;
+  --font-display: 'Merriweather', serif;
+  --font-body: 'Open Sans', sans-serif;
 }
 
 * { box-sizing: border-box; }
