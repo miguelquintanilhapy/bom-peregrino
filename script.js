@@ -57,3 +57,13 @@ document.addEventListener('keydown', (e) => {
   if (e.key === 'ArrowLeft') document.getElementById('lightbox-prev').click();
   if (e.key === 'ArrowRight') document.getElementById('lightbox-next').click();
 });
+
+// FAQ accordion
+document.querySelectorAll('.faq-item').forEach(item => {
+  const question = item.querySelector('.faq-question');
+  question.addEventListener('click', () => {
+    const isOpen = item.classList.contains('open');
+    document.querySelectorAll('.faq-item.open').forEach(open => open.classList.remove('open'));
+    if (!isOpen) item.classList.add('open');
+  });
+});

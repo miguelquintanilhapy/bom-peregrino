@@ -255,7 +255,7 @@ a { text-decoration: none; color: inherit; }
   border-radius: 999px;
   font-weight: 600;
   font-size: 0.95rem;
-  transition: transform 0.2s, box-shadow 0.2s;
+  transition: transform 0.2s, box-shadow 0.2s, background-color 0.2s, color 0.2s, border-color 0.2s;
   border: 2px solid transparent;
 }
 .btn:hover { transform: translateY(-2px); }
@@ -265,18 +265,33 @@ a { text-decoration: none; color: inherit; }
   color: var(--ink);
   box-shadow: 0 4px 16px rgba(0,0,0,0.35);
 }
+.btn-primary:hover {
+  background: var(--brand-red-bright);
+  color: #fff;
+}
 .btn-ghost {
   border-color: var(--cream);
   color: var(--cream);
+}
+.btn-ghost:hover {
+  background: var(--cream);
+  color: var(--ink);
 }
 .btn-outline {
   border-color: var(--brand-red-bright);
   color: var(--brand-red-bright);
 }
+.btn-outline:hover {
+  background: var(--brand-red-bright);
+  color: #fff;
+}
 .btn-whatsapp {
   background: #25d366;
   color: #063d1e;
   box-shadow: 0 4px 16px rgba(37,211,102,0.4);
+}
+.btn-whatsapp:hover {
+  background: #1ebe5a;
 }
 .btn-lg { padding: 16px 34px; font-size: 1rem; }
 
@@ -506,6 +521,40 @@ a { text-decoration: none; color: inherit; }
 }
 
 /* Testimonials */
+.testimonials-head {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-wrap: wrap;
+  gap: 24px;
+  margin-bottom: 40px;
+}
+.testimonials-head .section-title { margin: 0; }
+
+.rating-badge { text-align: right; }
+.rating-number {
+  font-family: var(--font-display);
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--gold);
+}
+.rating-number small { font-size: 1rem; opacity: 0.7; }
+.rating-stars {
+  display: flex;
+  gap: 2px;
+  justify-content: flex-end;
+  color: var(--gold);
+  margin: 4px 0;
+}
+.rating-stars .icon { width: 16px; height: 16px; }
+.rating-stars.sm { justify-content: flex-start; }
+.rating-caption {
+  margin: 0;
+  font-size: 0.82rem;
+  color: var(--gold-light);
+}
+.rating-caption a { text-decoration: underline; font-weight: 600; }
+
 .testimonial-grid {
   display: grid;
   grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
@@ -518,18 +567,99 @@ a { text-decoration: none; color: inherit; }
   border-radius: var(--radius);
   padding: 24px;
 }
+.testimonial-head {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 14px;
+}
+.avatar {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: var(--brand-red);
+  color: var(--gold-light);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 0.85rem;
+  flex-shrink: 0;
+}
+.testimonial-head cite {
+  display: block;
+  color: var(--gold);
+  font-size: 0.9rem;
+  font-style: normal;
+  font-weight: 600;
+}
 .testimonial p {
-  margin: 0 0 14px;
+  margin: 0;
   color: var(--cream);
   font-style: italic;
   font-size: 0.95rem;
 }
-.testimonial cite {
-  color: var(--gold);
-  font-size: 0.85rem;
-  font-style: normal;
-  font-weight: 600;
+.testimonials-cta {
+  text-align: center;
+  margin-top: 40px;
 }
+
+/* FAQ */
+.faq-container { max-width: 760px; }
+.faq-list {
+  border-top: 1px solid rgba(251,205,150,0.15);
+}
+.faq-item {
+  border-bottom: 1px solid rgba(251,205,150,0.15);
+}
+.faq-question {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  background: none;
+  border: none;
+  color: var(--cream);
+  font-family: var(--font-body);
+  font-size: 1rem;
+  font-weight: 600;
+  text-align: left;
+  padding: 22px 0;
+  cursor: pointer;
+}
+.faq-toggle {
+  flex-shrink: 0;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--gold);
+  font-size: 1.3rem;
+  font-weight: 400;
+  border: 1px solid rgba(251,205,150,0.3);
+  transition: transform 0.25s, background 0.25s;
+}
+.faq-item.open .faq-toggle {
+  transform: rotate(45deg);
+  background: var(--brand-red);
+  border-color: var(--brand-red);
+  color: #fff;
+}
+.faq-answer {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+.faq-answer p {
+  margin: 0 0 22px;
+  color: var(--text-muted);
+  font-size: 0.92rem;
+  max-width: 640px;
+}
+.faq-item.open .faq-answer { max-height: 300px; }
 
 /* Localização */
 .localizacao-inner {
