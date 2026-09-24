@@ -34,7 +34,14 @@
   </div>
 </header>
 
-<section class="hero" style="background-image: url('assets/img/galeria/pizza-tomate-bacon.jpg');">
+<section class="hero">
+  <div class="hero-bg">
+    <div class="hero-bg-slide active" style="background-image: url('assets/img/galeria/pizza-tomate-bacon.jpg');"></div>
+    <div class="hero-bg-slide" style="background-image: url('assets/img/galeria/pizza-1.jpg');"></div>
+    <div class="hero-bg-slide" style="background-image: url('assets/img/galeria/pizza-morango.jpg');"></div>
+    <div class="hero-bg-slide" style="background-image: url('assets/img/galeria/pizza-catupiry.jpg');"></div>
+    <div class="hero-bg-slide" style="background-image: url('assets/img/galeria/pizza-2.jpg');"></div>
+  </div>
   <div class="hero-overlay"></div>
   <div class="container hero-inner">
     <img src="assets/img/logo.webp" alt="Bom Peregrino" class="hero-logo">
@@ -53,13 +60,13 @@
 </section>
 
 <div class="split-banner">
-  <div class="split-panel split-light">
+  <div class="split-panel split-light reveal">
     <p class="split-eyebrow">RODÍZIO À NOITE</p>
     <h3>Toda semana tem</h3>
     <p class="split-text">Sabores salgados e doces, à vontade, com opções para toda a família — do chefinho ao adulto.</p>
     <div class="split-chip"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg> Todos os dias · 18h30 às 23h</div>
   </div>
-  <div class="split-panel split-dark">
+  <div class="split-panel split-dark reveal">
     <p class="split-eyebrow">MUITO ALÉM DA PIZZA</p>
     <h3>Conheça os segredos da casa</h3>
     <p class="split-text">Espaço kids, grupo VIP, gift card e uma equipe pronta para deixar sua visita inesquecível.</p>
@@ -72,7 +79,7 @@
     <h2 class="section-title">Rodízios da Semana</h2>
     <p class="section-subtitle">Sabor, fartura e o preço mais gostoso de São José dos Campos.</p>
 
-    <div class="rodizio-grid">
+    <div class="rodizio-grid reveal-stagger">
       <article class="rodizio-card featured">
         <img src="assets/img/rodizio-quarta.webp" alt="Rodízio Quarta das Mulheres">
         <div class="rodizio-card-body">
@@ -124,7 +131,7 @@
 </section>
 
 <section class="section section-alt" id="chefinho">
-  <div class="container chefinho-inner">
+  <div class="container chefinho-inner reveal">
     <div class="chefinho-video">
       <video controls playsinline poster="assets/img/rodizio-domingo.webp">
         <source src="assets/video/chefinho.mp4" type="video/mp4">
@@ -140,14 +147,14 @@
 </section>
 
 <section class="section historia" id="historia">
-  <div class="container historia-inner">
+  <div class="container historia-inner reveal">
     <div class="historia-text">
       <p class="split-eyebrow">NOSSA HISTÓRIA</p>
       <h2 class="historia-title">Uma pizzaria feita com <em>amor e tradição</em></h2>
       <p>O Bom Peregrino nasceu do desejo de criar um espaço onde a pizza gourmet encontra o acolhimento de um ambiente em família. Na Av. Anchieta, a casa conquistou seu lugar no coração de São José dos Campos, reunindo gerações de clientes em torno da mesa.</p>
       <p>Com nota 4,9 e mais de 4,3 mil avaliações no Google, seguimos com o mesmo propósito de sempre: pizza artesanal, fartura de rodízio e um atendimento que faz cada visita valer a pena.</p>
     </div>
-    <div class="historia-features">
+    <div class="historia-features reveal-stagger">
       <div class="feature-card">
         <span class="feature-icon"><svg class="icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 3l18 8-9 10L3 3z"/><circle cx="10" cy="9" r="1" fill="currentColor" stroke="none"/><circle cx="14" cy="13" r="1" fill="currentColor" stroke="none"/></svg></span>
         <div>
@@ -174,7 +181,7 @@
 </section>
 
 <section class="section" id="vip">
-  <div class="container vip-inner">
+  <div class="container vip-inner reveal">
     <div class="vip-text">
       <h2 class="section-title left">Grupo VIP Bom Peregrino SJC</h2>
       <p>Entre para o canal com mais de <strong>2,3 mil membros</strong> e receba promoções, avisos de rodízio e conteúdos exclusivos em primeira mão.</p>
@@ -185,7 +192,7 @@
 </section>
 
 <section class="section section-alt" id="giftcard">
-  <div class="container giftcard-inner">
+  <div class="container giftcard-inner reveal">
     <div class="giftcard-text">
       <h2 class="section-title left">Gift Card</h2>
       <p>Mais do que um presente, um benefício que vale para várias pessoas. Presenteie quem você gosta com uma experiência Bom Peregrino.</p>
@@ -199,7 +206,7 @@
     <h2 class="section-title">Nosso Espaço</h2>
     <p class="section-subtitle">Um ambiente pensado para toda a família, do salão ao playground.</p>
 
-    <div class="gallery-grid" id="gallery-grid-espaco">
+    <div class="gallery-grid reveal-stagger" id="gallery-grid-espaco">
       <figure class="gallery-item large">
         <img src="assets/img/galeria/salao-1.jpg" alt="Salão do restaurante Bom Peregrino">
       </figure>
@@ -218,7 +225,7 @@
     <h2 class="section-title">Cardápio</h2>
     <p class="section-subtitle">Uma amostra das pizzas artesanais que você encontra no nosso rodízio.</p>
 
-    <div class="gallery-grid" id="gallery-grid-cardapio">
+    <div class="gallery-grid reveal-stagger" id="gallery-grid-cardapio">
       <figure class="gallery-item large">
         <img src="assets/img/galeria/pizza-1.jpg" alt="Pizza artesanal Bom Peregrino">
       </figure>
@@ -248,7 +255,7 @@
 
 <section class="section section-alt" id="depoimentos">
   <div class="container">
-    <div class="testimonials-head">
+    <div class="testimonials-head reveal">
       <h2 class="section-title left">O que os clientes dizem</h2>
       <div class="rating-badge">
         <span class="rating-number">4,9<small>/5</small></span>
@@ -263,7 +270,7 @@
       </div>
     </div>
 
-    <div class="testimonial-grid">
+    <div class="testimonial-grid reveal-stagger">
       <blockquote class="testimonial">
         <div class="testimonial-head">
           <span class="avatar">NF</span>
@@ -324,7 +331,7 @@
 </section>
 
 <section class="section" id="duvidas">
-  <div class="container faq-container">
+  <div class="container faq-container reveal">
     <h2 class="section-title left">Perguntas frequentes</h2>
 
     <div class="faq-list">
@@ -378,7 +385,7 @@
 </section>
 
 <section class="section" id="localizacao">
-  <div class="container localizacao-inner">
+  <div class="container localizacao-inner reveal">
     <div class="localizacao-text">
       <p class="split-eyebrow">LOCALIZAÇÃO &amp; HORÁRIOS</p>
       <h2 class="historia-title">Venha nos <em>visitar</em></h2>
@@ -422,7 +429,7 @@
 </section>
 
 <section class="cta-banner" id="reserva">
-  <div class="container">
+  <div class="container reveal">
     <h2>Faça sua reserva, <em>é rápido</em></h2>
     <p>Entre em contato pelo WhatsApp e garanta sua mesa. Atendemos todos os dias das 18h30 às 23h.</p>
     <a href="https://wa.me/5512996373255" target="_blank" rel="noopener" class="btn btn-whatsapp"><svg class="icon" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.272-.099-.47-.148-.669.15-.198.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.1-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.499-.669-.508-.173-.008-.372-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.095 3.2 5.076 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347z M12.017 2C6.483 2 2 6.484 2 12.017c0 1.949.549 3.85 1.588 5.492L2 22l4.611-1.559A9.997 9.997 0 0 0 12.017 22C17.55 22 22.033 17.514 22.033 12.017 22.033 6.484 17.551 2 12.017 2zm.001 18.081a8.05 8.05 0 0 1-4.103-1.117l-.294-.175-3.048 1.03 1.017-2.97-.19-.303a8.052 8.052 0 0 1-1.234-4.304c0-4.459 3.623-8.084 8.082-8.084 4.457 0 8.081 3.625 8.081 8.084 0 4.459-3.624 8.081-8.081 8.081z"/></svg> Reservar pelo WhatsApp</a>

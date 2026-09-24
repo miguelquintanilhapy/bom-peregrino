@@ -1,5 +1,32 @@
 document.getElementById('year').textContent = new Date().getFullYear();
 
+// Hero background slideshow
+const heroSlides = document.querySelectorAll('.hero-bg-slide');
+if (heroSlides.length > 1) {
+  let heroIndex = 0;
+  setInterval(() => {
+    heroSlides[heroIndex].classList.remove('active');
+    heroIndex = (heroIndex + 1) % heroSlides.length;
+    heroSlides[heroIndex].classList.add('active');
+  }, 6000);
+}
+
+// Scroll reveal animations
+const revealTargets = document.querySelectorAll('.reveal, .reveal-stagger');
+if ('IntersectionObserver' in window) {
+  const revealObserver = new IntersectionObserver((entries, observer) => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add('visible');
+        observer.unobserve(entry.target);
+      }
+    });
+  }, { threshold: 0.15, rootMargin: '0px 0px -60px 0px' });
+  revealTargets.forEach(target => revealObserver.observe(target));
+} else {
+  revealTargets.forEach(target => target.classList.add('visible'));
+}
+
 const burger = document.getElementById('burger');
 const nav = document.getElementById('nav');
 
