@@ -7,7 +7,7 @@
 <meta name="description" content="Bom Peregrino Pizza Gourmet - Rodízio de pizzas em São José dos Campos. Reserve sua mesa!">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Cinzel:wght@600;700;900&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,600;0,700;0,900;1,600;1,700&family=Cinzel:wght@600;700&family=Poppins:wght@400;500;600;700;800&display=swap" rel="stylesheet">
 <link rel="stylesheet" href="styles.css">
 <link rel="icon" type="image/webp" href="assets/img/logo.webp">
 </head>
@@ -19,12 +19,11 @@
       <img src="assets/img/logo.webp" alt="Bom Peregrino Pizza Gourmet" class="logo-img">
     </div>
     <nav class="nav" id="nav">
+      <a href="#historia">Nossa História</a>
       <a href="#rodizios">Rodízios</a>
-      <a href="#chefinho">Chefinho</a>
-      <a href="#vip">Grupo VIP</a>
-      <a href="#giftcard">Gift Card</a>
-      <a href="#galeria">Espaço</a>
+      <a href="#galeria">Galeria</a>
       <a href="#depoimentos">Avaliações</a>
+      <a href="#localizacao">Localização</a>
       <a href="#reserva" class="nav-cta">Reservar</a>
     </nav>
     <button class="burger" id="burger" aria-label="Abrir menu">
@@ -33,19 +32,38 @@
   </div>
 </header>
 
-<section class="hero">
-  <div class="hero-glow"></div>
+<section class="hero" style="background-image: url('assets/img/galeria/pizza-tomate-bacon.jpg');">
+  <div class="hero-overlay"></div>
   <div class="container hero-inner">
-    <p class="hero-eyebrow">Pizzaria Gourmet Original · São José dos Campos</p>
-    <h1 class="hero-title">Bom Peregrino</h1>
-    <p class="hero-tagline">Rodízio de pizzas artesanais, todo dia é uma boa peregrinação de sabor.</p>
+    <img src="assets/img/logo.webp" alt="Bom Peregrino" class="hero-logo">
+    <p class="hero-eyebrow">Pizza Gourmet · São José dos Campos</p>
+    <p class="hero-tagline">O sabor que São José ama. Rodízio de pizzas artesanais todos os dias.</p>
     <p class="hero-rating">⭐ 4,9 · mais de 4,3 mil avaliações no Google</p>
     <div class="hero-actions">
-      <a href="#reserva" class="btn btn-primary">Reservar uma mesa</a>
-      <a href="#rodizios" class="btn btn-ghost">Ver rodízios da semana</a>
+      <a href="#rodizios" class="btn btn-primary">🍕 Ver rodízios</a>
+      <a href="#localizacao" class="btn btn-ghost">📍 Como chegar</a>
     </div>
   </div>
+  <div class="hero-scroll">
+    <span>deslize</span>
+    <div class="hero-scroll-arrow">⌄</div>
+  </div>
 </section>
+
+<div class="split-banner">
+  <div class="split-panel split-light">
+    <p class="split-eyebrow">RODÍZIO À NOITE</p>
+    <h3>Toda semana tem</h3>
+    <p class="split-text">Sabores salgados e doces, à vontade, com opções para toda a família — do chefinho ao adulto.</p>
+    <div class="split-chip">🕒 Todos os dias · 18h30 às 23h</div>
+  </div>
+  <div class="split-panel split-dark">
+    <p class="split-eyebrow">MUITO ALÉM DA PIZZA</p>
+    <h3>Conheça os segredos da casa</h3>
+    <p class="split-text">Espaço kids, grupo VIP, gift card e uma equipe pronta para deixar sua visita inesquecível.</p>
+    <div class="split-chip">⭐ 4,9 no Google · 4,3 mil avaliações</div>
+  </div>
+</div>
 
 <section class="section" id="rodizios">
   <div class="container">
@@ -119,6 +137,40 @@
   </div>
 </section>
 
+<section class="section historia" id="historia">
+  <div class="container historia-inner">
+    <div class="historia-text">
+      <p class="split-eyebrow">NOSSA HISTÓRIA</p>
+      <h2 class="historia-title">Uma pizzaria feita com <em>amor e tradição</em></h2>
+      <p>O Bom Peregrino nasceu do desejo de criar um espaço onde a pizza gourmet encontra o acolhimento de um ambiente em família. Na Av. Anchieta, a casa conquistou seu lugar no coração de São José dos Campos, reunindo gerações de clientes em torno da mesa.</p>
+      <p>Com nota 4,9 e mais de 4,3 mil avaliações no Google, seguimos com o mesmo propósito de sempre: pizza artesanal, fartura de rodízio e um atendimento que faz cada visita valer a pena.</p>
+    </div>
+    <div class="historia-features">
+      <div class="feature-card">
+        <span class="feature-icon">🍕</span>
+        <div>
+          <h4>Massa Artesanal</h4>
+          <p>Pizzas assadas na hora, com receitas exclusivas — do tradicional ao mais ousado.</p>
+        </div>
+      </div>
+      <div class="feature-card">
+        <span class="feature-icon">🔥</span>
+        <div>
+          <h4>Rodízio Completo</h4>
+          <p>Todos os dias, sabores salgados e doces à vontade, para toda a família.</p>
+        </div>
+      </div>
+      <div class="feature-card">
+        <span class="feature-icon">👨‍👩‍👧‍👦</span>
+        <div>
+          <h4>Espaço Kids</h4>
+          <p>Playground e Cantinho do Chefinho, com monitoria para as crianças curtirem também.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
 <section class="section" id="vip">
   <div class="container vip-inner">
     <div class="vip-text">
@@ -145,7 +197,7 @@
     <h2 class="section-title">Nosso Espaço</h2>
     <p class="section-subtitle">Um ambiente pensado para toda a família, com pizzas artesanais feitas na hora.</p>
 
-    <div class="gallery-grid">
+    <div class="gallery-grid" id="gallery-grid">
       <figure class="gallery-item large">
         <img src="assets/img/galeria/salao-1.jpg" alt="Salão do restaurante Bom Peregrino">
       </figure>
@@ -174,6 +226,14 @@
   </div>
 </section>
 
+<div class="lightbox" id="lightbox">
+  <button class="lightbox-close" id="lightbox-close" aria-label="Fechar">✕</button>
+  <button class="lightbox-nav lightbox-prev" id="lightbox-prev" aria-label="Anterior">‹</button>
+  <img src="" alt="" id="lightbox-img">
+  <button class="lightbox-nav lightbox-next" id="lightbox-next" aria-label="Próxima">›</button>
+  <div class="lightbox-counter" id="lightbox-counter"></div>
+</div>
+
 <section class="section section-alt" id="depoimentos">
   <div class="container">
     <h2 class="section-title">Quem já veio, aprova</h2>
@@ -196,44 +256,86 @@
   </div>
 </section>
 
-<section class="section" id="reserva">
-  <div class="container reserva-inner">
-    <h2 class="section-title">Reserve sua mesa</h2>
-    <p class="section-subtitle">Garanta seu lugar no rodízio Bom Peregrino.</p>
-    <div class="reserva-actions">
-      <a href="https://wa.me/5512996373255" target="_blank" rel="noopener" class="btn btn-primary btn-lg">Reservar pelo WhatsApp</a>
-      <a href="https://www.instagram.com/bomperegrinosjc" target="_blank" rel="noopener" class="btn btn-ghost btn-lg">Ver Instagram</a>
+<section class="section" id="localizacao">
+  <div class="container localizacao-inner">
+    <div class="localizacao-text">
+      <p class="split-eyebrow">LOCALIZAÇÃO &amp; HORÁRIOS</p>
+      <h2 class="historia-title">Venha nos <em>visitar</em></h2>
+      <div class="info-row">
+        <span class="info-icon">📍</span>
+        <div>
+          <h4>Endereço</h4>
+          <p>Av. Anchieta, 1500 - Jardim Nova América<br>São José dos Campos - SP, 12242-280</p>
+        </div>
+      </div>
+      <div class="info-row">
+        <span class="info-icon">🕒</span>
+        <div>
+          <h4>Horário</h4>
+          <p>Todos os dias, 18:30 às 23:00</p>
+        </div>
+      </div>
+      <div class="info-row">
+        <span class="info-icon">📞</span>
+        <div>
+          <h4>Telefone</h4>
+          <p><a href="tel:+5512996373255">(12) 99637-3255</a></p>
+        </div>
+      </div>
+      <a href="https://wa.me/5512996373255" target="_blank" rel="noopener" class="btn btn-primary">Reservar pelo WhatsApp</a>
     </div>
-
-    <div class="info-grid">
-      <div class="info-card">
-        <h3>Endereço</h3>
-        <p>Av. Anchieta, 1500 - Jardim Nova América<br>São José dos Campos - SP, 12242-280</p>
-        <a href="https://maps.google.com/?q=Pizzaria+Bom+Peregrino+Av.+Anchieta+1500+São+José+dos+Campos" target="_blank" rel="noopener">Ver no mapa</a>
-      </div>
-      <div class="info-card">
-        <h3>Telefone</h3>
-        <p>(12) 99637-3255</p>
-        <a href="tel:+5512996373255">Ligar agora</a>
-      </div>
-      <div class="info-card">
-        <h3>Horário</h3>
-        <p>Todos os dias<br>18:30 às 23:00</p>
-      </div>
+    <div class="localizacao-map">
+      <iframe
+        title="Mapa Bom Peregrino Pizza Gourmet"
+        src="https://www.google.com/maps?q=Pizzaria+Bom+Peregrino+S%C3%A3o+Jos%C3%A9+dos+Campos,+Av.+Anchieta+1500&output=embed"
+        loading="lazy"
+        referrerpolicy="no-referrer-when-downgrade">
+      </iframe>
     </div>
   </div>
 </section>
 
+<section class="cta-banner" id="reserva">
+  <div class="container">
+    <h2>Faça sua reserva, <em>é rápido</em></h2>
+    <p>Entre em contato pelo WhatsApp e garanta sua mesa. Atendemos todos os dias das 18h30 às 23h.</p>
+    <a href="https://wa.me/5512996373255" target="_blank" rel="noopener" class="btn btn-whatsapp">💬 Reservar pelo WhatsApp</a>
+  </div>
+</section>
+
 <footer class="site-footer">
-  <div class="container footer-inner">
-    <div class="logo">
+  <div class="container footer-grid">
+    <div class="footer-brand">
       <img src="assets/img/logo.webp" alt="Bom Peregrino Pizza Gourmet" class="logo-img small">
+      <p>Pizza Gourmet em São José dos Campos. Rodízio completo, todos os dias, das 18h30 às 23h.</p>
+      <div class="social-row">
+        <a href="https://www.instagram.com/bomperegrinosjc" target="_blank" rel="noopener" aria-label="Instagram">📷</a>
+        <a href="https://wa.me/5512996373255" target="_blank" rel="noopener" aria-label="WhatsApp">💬</a>
+      </div>
     </div>
+    <div class="footer-col">
+      <h5>Navegação</h5>
+      <a href="#historia">Nossa História</a>
+      <a href="#rodizios">Rodízios</a>
+      <a href="#galeria">Galeria</a>
+      <a href="#localizacao">Localização</a>
+    </div>
+    <div class="footer-col">
+      <h5>Contato</h5>
+      <a href="tel:+5512996373255">(12) 99637-3255</a>
+      <span>Av. Anchieta, 1500</span>
+      <span>Jardim Nova América — SJC</span>
+    </div>
+  </div>
+  <div class="footer-bottom">
     <p>&copy; <span id="year"></span> Bom Peregrino Pizza Gourmet. Todos os direitos reservados.</p>
-    <p>Av. Anchieta, 1500 - Jardim Nova América, São José dos Campos - SP · (12) 99637-3255</p>
-    <a href="https://www.instagram.com/bomperegrinosjc" target="_blank" rel="noopener">@bomperegrinosjc</a>
   </div>
 </footer>
+
+<div class="floating-actions">
+  <a href="https://wa.me/5512996373255" target="_blank" rel="noopener" class="fab fab-whatsapp" aria-label="WhatsApp">💬</a>
+  <a href="https://www.instagram.com/bomperegrinosjc" target="_blank" rel="noopener" class="fab fab-instagram" aria-label="Instagram">📷</a>
+</div>
 
 <script src="script.js"></script>
 </body>

@@ -10,3 +10,50 @@ burger.addEventListener('click', () => {
 nav.querySelectorAll('a').forEach(link => {
   link.addEventListener('click', () => nav.classList.remove('open'));
 });
+
+// Lightbox gallery
+const galleryItems = Array.from(document.querySelectorAll('#gallery-grid .gallery-item img'));
+const lightbox = document.getElementById('lightbox');
+const lightboxImg = document.getElementById('lightbox-img');
+const lightboxCounter = document.getElementById('lightbox-counter');
+let currentIndex = 0;
+
+function openLightbox(index) {
+  currentIndex = index;
+  updateLightbox();
+  lightbox.classList.add('open');
+}
+
+function updateLightbox() {
+  const img = galleryItems[currentIndex];
+  lightboxImg.src = img.src;
+  lightboxImg.alt = img.alt;
+  lightboxCounter.textContent = `${currentIndex + 1} / ${galleryItems.length}`;
+}
+
+function closeLightbox() {
+  lightbox.classList.remove('open');
+}
+
+galleryItems.forEach((img, index) => {
+  img.parentElement.addEventListener('click', () => openLightbox(index));
+});
+
+document.getElementById('lightbox-close').addEventListener('click', closeLightbox);
+document.getElementById('lightbox-prev').addEventListener('click', () => {
+  currentIndex = (currentIndex - 1 + galleryItems.length) % galleryItems.length;
+  updateLightbox();
+});
+document.getElementById('lightbox-next').addEventListener('click', () => {
+  currentIndex = (currentIndex + 1) % galleryItems.length;
+  updateLightbox();
+});
+lightbox.addEventListener('click', (e) => {
+  if (e.target === lightbox) closeLightbox();
+});
+document.addEventListener('keydown', (e) => {
+  if (!lightbox.classList.contains('open')) return;
+  if (e.key === 'Escape') closeLightbox();
+  if (e.key === 'ArrowLeft') document.getElementById('lightbox-prev').click();
+  if (e.key === 'ArrowRight') document.getElementById('lightbox-next').click();
+});
