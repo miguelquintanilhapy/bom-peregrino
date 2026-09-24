@@ -664,9 +664,9 @@ a { text-decoration: none; color: inherit; }
 /* Localização */
 .localizacao-inner {
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template-columns: 2fr 3fr;
   gap: 48px;
-  align-items: center;
+  align-items: start;
 }
 .info-row {
   display: flex;
@@ -680,7 +680,7 @@ a { text-decoration: none; color: inherit; }
 .info-row a { color: var(--brand-red-bright); font-weight: 600; }
 .localizacao-map iframe {
   width: 100%;
-  height: 340px;
+  height: 460px;
   border: 0;
   border-radius: var(--radius);
 }
