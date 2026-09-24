@@ -367,6 +367,7 @@ a { text-decoration: none; color: inherit; }
   background: #1ebe5a;
 }
 .btn-lg { padding: 16px 34px; font-size: 1rem; }
+.cardapio-cta { text-align: center; margin-top: 40px; }
 
 /* Sections */
 .section { padding: 90px 0; background: var(--paper); }
