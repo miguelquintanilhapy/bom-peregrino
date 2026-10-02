@@ -30,12 +30,24 @@ if ('IntersectionObserver' in window) {
 const burger = document.getElementById('burger');
 const nav = document.getElementById('nav');
 
+function setMenu(open) {
+  nav.classList.toggle('open', open);
+  burger.classList.toggle('open', open);
+  burger.setAttribute('aria-label', open ? 'Fechar menu' : 'Abrir menu');
+  document.body.classList.toggle('menu-open', open);
+  document.body.style.overflow = open ? 'hidden' : '';
+}
+
 burger.addEventListener('click', () => {
-  nav.classList.toggle('open');
+  setMenu(!nav.classList.contains('open'));
 });
 
 nav.querySelectorAll('a').forEach(link => {
-  link.addEventListener('click', () => nav.classList.remove('open'));
+  link.addEventListener('click', () => setMenu(false));
+});
+
+document.querySelectorAll('.header-actions .nav-cta, .logo').forEach(link => {
+  link.addEventListener('click', () => setMenu(false));
 });
 
 // Lightbox gallery
